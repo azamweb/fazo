@@ -13,7 +13,11 @@
         <p>{{ t("code") }}</p>
         <form @submit.prevent="verifyingcoding()">
           <div class="header-contact-form-thert">
-            <input v-model="verofycode" type="tel" placeholder="kodni kriting" />
+            <input
+              v-model="verofycode"
+              type="tel"
+              placeholder="kodni kriting"
+            />
           </div>
           <h4 id="time">02:00</h4>
           <button
@@ -22,7 +26,7 @@
                 (store.contactopen3 = false)
             "
           >
-          {{ t("sent") }}
+            {{ t("sent") }}
           </button>
         </form>
       </div>
@@ -34,7 +38,7 @@
 import service from "~/services/service";
 import { useStore } from "~~/store/store";
 const store = useStore();
-const {locale, t} = useI18n()
+const { locale, t } = useI18n();
 const time = ref(60);
 const duration = defineProps(["duration"]);
 console.log(duration);
@@ -53,24 +57,24 @@ function startTimer(duration, display) {
     display.textContent = minutes + ":" + seconds;
 
     if (--timer < 0) {
-      timer = duration;
+      timer = 0;
     }
   }, 1000);
 }
 
 function startTime() {
-  setTimeout(() => {
-    let twoMinutes = time.value * 2;
-    let display = document.querySelector("#time");
-    startTimer(twoMinutes, display);
-  }, 100);
+  let twoMinutes = time.value * 2;
+  let display = document.querySelector("#time");
+  startTimer(twoMinutes, display);
 }
-watch(()=> store.contactopen3, ()=> {
-  startTime()
-})
-
-
-
+watch(
+  () => store.contactopen3,
+  () => {
+    if (process.client) {
+      startTime();
+    }
+  }
+);
 
 const verofycode = ref("");
 
@@ -81,12 +85,11 @@ async function verifyingcoding() {
   };
   const res = await service.verify(body);
   if (res.status == 200) {
-    store.code = verofycode.value
+    store.code = verofycode.value;
     store.contactopen3 = !store.contactopen3;
     store.contactopen3 = false;
   }
 }
-
 </script>
 
 <style lang="scss">
