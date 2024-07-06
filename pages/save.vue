@@ -2,11 +2,11 @@
     <div>
         <div class="save">
     <div class="container">
-      <div class="defoult-item" v-if="!store.save.length">
+      <div class="defoult-item" v-if="!store.save?.length">
         <h1 class="default-page">
           {{ t("save") }}
         </h1>
-        <img class="defoult-img" src="../assets/images/png/don'tknow.jpg" alt="one boy">
+        <img class="defoult-img" src="../assets/images/png/dontknow.jpg" alt="one boy">
       </div>
       <div class="save-products" v-else>
         <div class="save-cards" v-for="(item,i) in store.save" :key="item">

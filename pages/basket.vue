@@ -2,13 +2,13 @@
   <div class="basket">
     <div class="container">
     
-      <div class="defoult-item" v-if="!store.cart.length">
+      <div class="defoult-item" v-if="!store.cart?.length">
         <h1 class="default-page">
           {{ t("add") }}
         </h1>
         <img
           class="defoult-img"
-          src="../assets/images/png/don'tknow.jpg"
+          src="../assets/images/png/dontknow.jpg"
           alt="one boy"
         />
       </div>
