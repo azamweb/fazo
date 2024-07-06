@@ -1,0 +1,29 @@
+{
+    "allProducts": "Barcha mahsulotlar",
+    "popularproducts": "mashhur toifalar",
+    "cheaprproducts": "Arzon Mahsulotlar:",
+    "brand": "Brandlar",
+    "cotegory": "Kategoryalar",
+    "call": "Qo'ng'iroqlar markazi:",
+    "information": "Umumiy Ma'lumot",
+    "save": "SIZ BU SAHIFAGA MAHSULOTNI SAQLAMAGANSIZ, iltimos o'zingizga yoqgan mahsulotni saqlang",
+    "add": "SIZ BU SAHIFAGA MAHSULOTNI qo'shmadingiz, iltimos o'zingizga yoqgan mahsulotni qo'shing",
+    "personal": "Shaxsiy Ma'lumotlar",
+    "change": "O'zgartrish",
+    "phone": "Telefon Raqami:",
+    "order": "Mening Buyurtmalarim",
+    "curent": "Hozirgi",
+    "all": "Hammasi",
+    "back": "Chiqish",
+     "entr": "Kirish",
+     "signup": "ro'yxatdan o'tish",
+        "next": "Keyingi",
+        "code": "Telefonni Tasdiqlash Uchun 4 Raqamli Kodi Jo'natildi",
+        "sent": " jonatish",
+        "basket": "savat",
+         "heart": "saqlash",
+         "from": "dan",
+         "to": "ga"
+
+
+}

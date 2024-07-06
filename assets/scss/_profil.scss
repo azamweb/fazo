@@ -1,0 +1,256 @@
+.header-profil {
+    margin: 50px  0;
+    position: relative;
+    .profil-container {
+        display: flex;
+        gap: 20px;
+        @include media(650px) {
+            flex-direction: column;
+        }
+    }
+    
+.header-profil-back {
+    width: 300px;
+    height: 80px;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    @include media(650px) {
+        width: 100%;
+    }
+    &:hover {
+        background: #e3e1e1;
+        border-radius: 5px;
+        
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
+    p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $bleak-color;
+
+    }
+}
+
+.header-profil-right {
+    border-left: 1px solid #bababa;
+    padding-left: 20px;
+    width: 100%;
+    .header-profil-right-personal {
+        border: 1px solid #bababa;
+        padding: 30px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px 5px  0 0;
+        section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            h4 {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                color: $text-color;
+            }
+        }
+        
+        button {
+            padding: 12px 35px;
+            border: 1px solid $light-orang;
+            background: $light-orang;
+            color: $pr-color;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            transition: all 0.3s ease;
+            &:hover {
+                background: transparent;
+                color: $light-orang;
+            }
+        }
+
+    }
+
+    .header-profil-right-about {
+        border: 1px solid #bababa;
+        padding: 30px 10px;
+        border-radius: 0 0  5px 5px ;
+        margin-bottom: 25px;
+        section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            h3 {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                color: $bleak-color;
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $text-color;
+        }
+    }
+
+    .header-profil-right-items {
+        border: 1px solid #bababa;
+        padding: 30px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media(550px) {
+            flex-direction: column;
+        }
+        .header-profil-right-item-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include media(550px) {
+                margin-bottom: 20px;
+            }
+            p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                color: $text-color;
+            }
+        }
+
+        .header-profil-right-btns {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            button {
+                padding: 12px 35px;
+                border: 1px solid $light-orang;
+                background: $light-orang;
+                color: $pr-color;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                transition: all 0.3s ease;
+                &:hover {
+                    background: transparent;
+                    color: $light-orang;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+.header-profil-chang {
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    width: 500px;
+    background: $pr-color;
+    z-index: 36;
+    border-radius: 5px;
+    @include media(1130px) {
+        left: 30%;
+      }
+      @include media(860px) {
+        left: 20%;
+      }
+      @include media(670px) {
+        left: 15%;
+      }
+      @include media(600px) {
+        left: 8%;
+      }
+      @include media(550px) {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+      }
+    .header-profil-chang-top {
+        background: $light-orang;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border-radius: 5px;
+        @include media(1130px) {
+            border-radius: 0;
+        }
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: $pr-color;
+          }
+          img {
+            cursor: pointer;
+          }
+    }
+    form {
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        input {
+          padding: 11px 0;
+          padding-left: 15px;
+          outline: none;
+          width: 100%;
+          border: 1px solid #D8DCE2;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 21px;
+            color: $bleak-color;
+          }
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        color: #474747;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 100%;
+        background: $light-orang;
+        color: $pr-color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        border: 1px solid $light-orang;
+        border-radius: 5px;
+        padding: 10px 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          background: transparent;
+          color: $light-orang;
+        }
+      }
+    }
+}
+
+}

@@ -1,0 +1,112 @@
+.save {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .defoult-item {
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+
+        .default-page {
+            width: 600px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 32px;
+            color: $text-color;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            margin-right: auto;
+            margin-left: auto;
+            padding-bottom: 10px;
+            @include media(630px) {
+                width: 100%;
+                font-size: 22px;
+                left: 28px;
+            }
+        }
+        .defoult-img {
+            width: 400px;
+            height: 500px;
+            object-fit: contain;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media(630px) {
+                width: 200px;
+                height: auto;
+            }
+        }
+    }
+    .save-products {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+        .save-cards {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #999999fb;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            &__img {
+                width: 240px;
+                height: 200px;
+                object-fit: contain;
+                margin-bottom: 20px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 10px;
+            }
+            &__link {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 26px;
+                color: $text-color;
+                padding: 0 20px;
+                display: -webkit-box;
+                display: -moz-box;
+                -webkit-box-orient: vertical;
+                -moz-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                -moz-line-clamp: 2;
+                line-clamp: 2;
+                cursor: pointer;
+                text-decoration: none;
+                margin-bottom: 30px;
+            }
+            .save-card-part {
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 15px;
+                margin-top: auto;
+                &__price {
+                    font-weight: 600px;
+                    font-size: 20px;
+                    line-height: 29px;
+                    color: $text-color;
+                }
+                .save-card-part-put {
+                    border: 1px solid #BA006D;
+                    border-radius: 50%;
+                    padding: 3px 9px;
+                    cursor: pointer;
+                    &.chang-color-two {
+                        background: $light-red;
+                    }
+                    &__img {
+                        margin-top: 5px;
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
